@@ -24,7 +24,6 @@
 
 
 
-#basic for loop
 # list1 = ["Tom", "Tim", "Tam"]
 # str1 = "Hello World"
 # dict1 = {1:"Tom", 2:"Tim", 3:"Tam"}
@@ -38,12 +37,29 @@
 
 
 
-control1 = 0
-control2 = 0
+# control1 = 0
+# control2 = 0
 
-while control1 < 10:
-    control1+=1
-    print("control1 = " + str(control1))
-    while control2 < 5:
-        control2 += 1
-        print("control2 = " + str(control2))
+# while control1 < 10:
+#     control1+=1
+#     print("control1 = " + str(control1))
+#     while control2 < 5:
+#         control2 += 1
+#         print("control2 = " + str(control2))
+
+
+
+from multiprocessing.dummy import Namespace
+
+
+count = 0
+names = []
+
+while count < 5:
+    name = str(input("What is your name?"))
+    names.append(name)
+    count += 1
+
+
+for name in names:
+    print(name + "is awesome!")
