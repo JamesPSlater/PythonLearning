@@ -11,7 +11,7 @@ debugging code
 
 class Budget():
     def __init__(self, balance):
-        self.balance = float(balance)       
+        self.balance = balance      
 
     
     
@@ -28,9 +28,10 @@ class Budget():
         self.balance = self.balance - self.amount
 
 
-TotalBudget = Budget(500)
+TotalBudget = Budget(float(input("Please enter a starting budget amount: ")))
 
-Budget.deposit(TotalBudget, 200)
+Budget.deposit(TotalBudget, float(input("How much would you like to deposit?")))
 print(f"{TotalBudget} after deposit of ?????")
-Budget.withdraw(TotalBudget, 500)
+
+Budget.withdraw(TotalBudget, float(input("How much would you like to withdraw?")))
 print(f"{TotalBudget} after withdrawal of ?????")
