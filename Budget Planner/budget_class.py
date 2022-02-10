@@ -9,9 +9,12 @@ class Budget():
 
     def deposit(self,amount):
         self.amount = amount
-        self.balance = self.balance + self.amount
+        self.balance += self.amount
+        return amount
+
 
 
     def withdraw(self,amount):
         self.amount = amount
-        self.balance = self.balance - self.amount
+        self.balance -= self.amount
+        return amount
