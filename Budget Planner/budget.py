@@ -10,6 +10,7 @@ from budget_class import Budget as bC
 if not path.isfile("./budget.txt"):
     bF.writeB()
 
+
 Active = True
 tBalance = bC(bF.readB())
 while Active == True:
