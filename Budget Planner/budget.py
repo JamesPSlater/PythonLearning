@@ -4,14 +4,14 @@ Way to add more budget types:
 '''
 
 from os import path
-import budget_func as bf
-from budget_class import Budget
+import budget_func as bF
+from budget_class import Budget as bC
 
 if not path.isfile("./budget.txt"):
-    bf.writeB()
+    bF.writeB()
 
 Active = True
-tBudget = Budget(bf.readB())
+tBalance = bC(bF.readB())
 while Active == True:
 
     choice = int(input("1. Deposit - 2. Withdraw - 3.View balance - 4.Exit      "))
@@ -19,18 +19,18 @@ while Active == True:
 
     if choice == 1:
         dValue = float(input("How much would you like to deposit?     "))
-        Budget.deposit(tBudget, dValue)
-        bf.writeN(tBudget)
-        print(f"{tBudget} after deposit of {dValue}")
+        bC.deposit(tBalance, dValue)
+        bF.writeN(tBalance)
+        print(f"{tBalance} after deposit of {dValue}")
 
     elif choice == 2:
         wValue =  float(input("How much would you like to withdraw?    "))
-        Budget.withdraw(tBudget, wValue)
-        bf.writeN(tBudget)
-        print(f"{tBudget} after withdrawal of {wValue}")
+        bC.withdraw(tBalance, wValue)
+        bF.writeN(tBalance)
+        print(f"{tBalance} after withdrawal of {wValue}")
 
     elif choice == 3:
-        print(tBudget)
+        print(tBalance)
     
     elif choice == 4:
         Active = False
