@@ -6,10 +6,10 @@ Way to add more budget types:
 from os import path
 import budget_func as bF
 from budget_class import Budget as bC
+# import pdb
 
 if not path.isfile("./budget.txt"):
     bF.writeB()
-
 
 Active = True
 tBalance = bC(bF.readB())

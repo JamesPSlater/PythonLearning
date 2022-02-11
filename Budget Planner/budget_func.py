@@ -7,7 +7,7 @@ def writeB():
 
 def writeN(tBalance):
     with open("budget.txt", "w") as fBudget:
-        fBudget.write(str(tBalance))
+        fBudget.write(str(tBalance.tBalance))
 
 def readB():
     with open("budget.txt", "r") as fBudget:

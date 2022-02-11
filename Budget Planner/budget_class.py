@@ -1,7 +1,6 @@
 class Budget():
     def __init__(self, tBalance):
-        self.tBalance = tBalance      
-
+        self.tBalance = tBalance
     
     
     def __repr__(self):
