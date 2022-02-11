@@ -11,26 +11,26 @@ if not path.isfile("./budget.txt"):
     bf.writeB()
 
 Active = True
-TotalBudget = Budget(bf.readB())
+tBudget = Budget(bf.readB())
 while Active == True:
 
     choice = int(input("1. Deposit - 2. Withdraw - 3.View balance - 4.Exit      "))
 
 
     if choice == 1:
-        depAmount = float(input("How much would you like to deposit?     "))
-        Budget.deposit(TotalBudget, depAmount)
-        bf.writeN(TotalBudget)
-        print(f"{TotalBudget} after deposit of {depAmount}")
+        dValue = float(input("How much would you like to deposit?     "))
+        Budget.deposit(tBudget, dValue)
+        bf.writeN(tBudget)
+        print(f"{tBudget} after deposit of {dValue}")
 
     elif choice == 2:
-        withAmount =  float(input("How much would you like to withdraw?    "))
-        Budget.withdraw(TotalBudget, withAmount)
-        bf.writeN(TotalBudget)
-        print(f"{TotalBudget} after withdrawal of {withAmount}")
+        wValue =  float(input("How much would you like to withdraw?    "))
+        Budget.withdraw(tBudget, wValue)
+        bf.writeN(tBudget)
+        print(f"{tBudget} after withdrawal of {wValue}")
 
     elif choice == 3:
-        print(TotalBudget)
+        print(tBudget)
     
     elif choice == 4:
         Active = False
