@@ -1,6 +1,0 @@
-[
-  "python-testing/tests/count_test.py::test_count_minus",
-  "python-testing/tests/count_test.py::test_count_normalNum",
-  "python-testing/tests/count_test.py::test_count_string",
-  "python-testing/tests/count_test.py::test_count_zeros"
-]
